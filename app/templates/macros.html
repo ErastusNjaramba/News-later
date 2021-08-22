@@ -1,0 +1,40 @@
+ 
+ {% macro displayNews(news) %}
+ <div class="container">
+     {% for display in news %}
+     <div class="row" style="background-color: grey; color: white;">
+         <div class="col-md-4">
+             <div class="card" style="width: 18rem;">
+                 <ul>
+                    <li><p style="font-size: large; font-family: Luna;">{{ display.name }}</p></li>
+                 </ul>
+                 
+                 <hr>
+             </div>
+         </div>
+         <div class="col-md-4">
+             <ul>
+                 <li><p style="font-size: medium; font-style: oblique;">{{ display.description }}</p></li>
+             </ul>
+             
+             <hr>
+ 
+ 
+ 
+         </div>
+         <div class="col-md-4">
+             <ul>
+                 <li style="color: rgb(255, 255, 255);"><a href="/article/{{display.id}}">Go to the page</a></li>
+             </ul>
+             <hr>
+             
+             
+ 
+         </div>
+         <div class="col-md-4">
+ 
+         </div>
+     </div>
+     {% endfor %}
+ </div>
+ {% endmacro %}
